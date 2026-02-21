@@ -2,12 +2,10 @@
 
 ## 🥁 CarnaCode 2026 - Desafio 21 - Strategy
 
-Oi, eu sou o [seu nome aqui] e este é o espaço onde compartilho minha jornada de aprendizado durante o desafio **CarnaCode 2026**, realizado pelo [balta.io](https://balta.io). 👻
-
-Aqui você vai encontrar projetos, exercícios e códigos que estou desenvolvendo durante o desafio. O objetivo é colocar a mão na massa, testar ideias e registrar minha evolução no mundo da tecnologia.
+Oi, eu sou o Leonardo Malavolti Monteiro e este é o espaço onde compartilho minha jornada de aprendizado durante o desafio **CarnaCode 2026**, realizado pelo [balta.io](https://balta.io). 👻
 
 ### Sobre este desafio
-No desafio **Strategy** eu tive que resolver um problema real implementando o **Design Pattern** em questão.
+No desafio **Strategy** eu tive que resolver um problema real implementando o **Design Pattern Strategy**.
 Neste processo eu aprendi:
 * ✅ Boas Práticas de Software
 * ✅ Código Limpo
@@ -18,8 +16,19 @@ Neste processo eu aprendi:
 Um e-commerce precisa calcular frete usando diferentes transportadoras (Correios, FedEx, DHL, Transportadora Local), cada uma com sua própria lógica de cálculo.
 O código atual usa condicionais para escolher o algoritmo, violando o Open/Closed Principle.
 
-## Sobre o CarnaCode 2026
-O desafio **CarnaCode 2026** consiste em implementar todos os 23 padrões de projeto (Design Patterns) em cenários reais. Durante os 23 desafios desta jornada, os participantes são submetidos ao aprendizado e prática na idetinficação de códigos não escaláveis e na solução de problemas utilizando padrões de mercado.
+## Solução com Strategy
+- Cada transportadora implementa a interface `IShippingStrategy`
+- `ShippingCalculator` delega cálculo, prazo e disponibilidade para a estratégia atual
+- Eliminadas estruturas switch/case
+- Permite adicionar novas transportadoras sem modificar o código existente
+- Algoritmos intercambiáveis em runtime
+- Facilita teste isolado de cada estratégia
+
+## Benefícios
+- Código limpo e modular
+- Cumpre Open/Closed Principle
+- Facilita manutenção e extensão
+- Permite composição de múltiplos algoritmos no futuro
 
 ### eBook - Fundamentos dos Design Patterns
 Minha principal fonte de conhecimento durante o desafio foi o eBook gratuito [Fundamentos dos Design Patterns](https://lp.balta.io/ebook-fundamentos-design-patterns).
